@@ -1,0 +1,53 @@
+2023-08-24  Phil Budne <phil@ultimate.com>
+	jsonpath.py: use open() not file() for Python3
+		up version to 0.82.2
+
+2022-07-29  Phil Budne <phil@ultimate.com>
+	Makefile: use python -m pytest
+	jsonpath.py: fix masukomi url and name
+		eliminate a deprecation warning
+		(missing r"")
+		up version to 0.82.1
+
+2019-06-26  Phil Budne <phil@ultimate.com>
+	Handle digits in names
+	Problem found by Petr Szturc
+	Add test/test4.py
+	upped version to 0.82
+
+2019-02-20  Phil Budne <phil@ultimate.com>
+	Put print under if debug
+	Add README file
+	Per Robert.Scrimo@digitalglobe.com
+	upped version to 0.81
+
+2018-10-27  Phil Budne <phil@ultimate.com>
+	Range check fix from ranxiaoyu@globalegrow.com
+	Converted tests to pytest
+	upped version to 0.80
+
+2017-04-27  Phil Budne <phil@ultimate.com>
+	Python3 compatibility from per.j.sandstrom@gmail.com
+	Upped version to 0.75 (declared "beta")
+
+2012-07-19  Phil Budne <phil@ultimate.com>
+	jsonpath.py: give up on = to == translation
+		reported by Ahmed El-Hassany <ahassany@umail.iu.edu>
+		upped version to 0.54
+
+2011-09-13  Phil Budne <phil@ultimate.com>
+	jsonpath.py: add use_eval argument
+	upped version to 0.53
+
+2011-05-04  Phil Budne <phil@ultimate.com>
+	setup.py: add .tar to url_path
+	jsonpath.py: upped version to 0.52.1
+
+2009-07-19  Phil Budne <phil@ultimate.com>
+	setup.py add #name to url
+
+2009-07-05  Phil Budne <phil@ultimate.com>
+	jsonpath.py: add __version__
+	setup.py: use __doc__ to create [long_]descr, use __version__
+	created CHANGELOG
+	upped version to 0.52

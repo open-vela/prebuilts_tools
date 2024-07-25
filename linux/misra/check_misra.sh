@@ -5,7 +5,7 @@ script_folder="$(dirname $(readlink -f $0))"
 echo "current working dir are $script_folder"
 
 # Initialize variables with defaults
-# the following "$script_folder/../../../frameworks/autocore" are the
+# the following "$script_folder/../../../../frameworks/autocore" are the
 # default source_folder to check, and user could still using "-s" option
 # to specify the custom directory that to be checked
 # for example, we could use:
@@ -16,14 +16,14 @@ echo "current working dir are $script_folder"
 # Please note that we need to specify the full path with "-s" option
 # not relative path, such as:
 # ```
-# bash check_misra.sh -s "../../../frameworks/test_autocore"
+# bash check_misra.sh -s "../../../../frameworks/test_autocore"
 # ```
 # is invalid
-source_folder="$script_folder/../../../frameworks/autocore" # -s, --source
-out_folder="$script_folder/.results"                        # -o, --out
-cppcheck_path="$script_folder/cppcheck_tool/"               # -c, --cppcheck
-quiet=0                                                     # -q, --quiet
-output_xml=0                                                # -x, --xml
+source_folder="$script_folder/../../../../frameworks/autocore" # -s, --source
+out_folder="$script_folder/.results"                           # -o, --out
+cppcheck_path="$script_folder/cppcheck_tool/"                  # -c, --cppcheck
+quiet=0                                                        # -q, --quiet
+output_xml=0                                                   # -x, --xml
 
 function parse_command_line() {
    while [ $# -gt 0 ] ; do
@@ -54,7 +54,7 @@ let num_cores--
 # before perform checking, we need to parse the $source_folder/Makefile
 # and parse out the header file include path, such as the following:
 # CFLAGS += -I$(APPDIR)/frameworks/autocore/os/include
-APPDIR="$script_folder/../../.."
+APPDIR="$script_folder/../../../.."
 # the path to specify the header file path
 header_include_full_path=""
 if [ -f $source_folder/Makefile ]; then

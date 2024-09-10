@@ -521,6 +521,7 @@ class CFIEntry(object):
                 last_line_in_CIE = copy.copy(cie_decoded_table.table[-1])
                 cur_line = copy.copy(last_line_in_CIE)
             else:
+                last_line_in_CIE = []
                 cur_line = dict(cfa=CFARule(reg=None, offset=0))
             cur_line['pc'] = self['initial_location']
             reg_order = copy.copy(cie_decoded_table.reg_order)

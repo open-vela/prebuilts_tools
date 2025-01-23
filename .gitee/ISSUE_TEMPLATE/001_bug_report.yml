@@ -1,0 +1,91 @@
+name: 缺陷反馈 | Bug
+description: 当您发现了一个缺陷，需要向社区反馈时，请使用此模板。
+title: "[BUG] <标题>"
+labels: [👀 needs triage, "Type: Bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢您对 openvela 社区的支持与关注，欢迎反馈缺陷。
+
+  - type: textarea
+    attributes:
+      label: "重现问题的步骤"
+      description: "简洁地描述错误是什么，为什么您认为它是一个错误，以及如何重现它的步骤"
+      placeholder: |
+        重现问题的步骤，可能包括日志和截图。
+        1. 步骤 1
+        2. 步骤 2
+    validations:
+      required: true
+
+  - type: dropdown
+    id: architecture
+    attributes:
+      label: Issue Architecture
+      multiple: true
+      options:
+        - "Arch: arm"
+        - "Arch: arm64"
+        - "Arch: x86_64"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Issue Area
+      description: 出现问题的模块
+      multiple: true
+      options:
+        - "System: libuv"
+        - "System: debug tools"
+        - "System: charger"
+        - "System: crypto"
+        - "System: security"
+        - "System: kvdb"
+        - "System: uorb"
+        - "System: FS"
+        - "System: memory manager"
+        - "System: power management"
+        - "System: scheduler"
+        - "System: drivers"
+        - "System: IPC (openamp)"
+        - "System: binder"
+        - "System: arch (X86-64, arm32, arm64, xtensa, risc-v, tricore, sim)"
+        - "System: nsh"
+        - "System: apps (examples, testcases)"
+        - "System: Build system"
+        - "System: others"
+        - "Connectivity: bluetooth"
+        - "Connectivity: network"
+        - "Connectivity: telephony"
+        - "Media: player"
+        - "Media: recorder"
+        - "Media: policy"
+        - "Media: focus"
+        - "Media: graph"
+        - "Media: pfw"
+        - "Graphics: demo"
+        - "Graphics: lvgl"
+        - "Graphics: uikit"
+        - "Graphics: libjpeg-turbo"
+        - "Graphics: libwebp"
+        - "Graphics: libpng"
+        - "Graphics: libyuv"
+        - "Graphics: freetype"
+        - "Graphics: harfbuzz"
+        - "Graphics: yoga"
+        - "Graphics: thorvg"
+        - "Runtimes: system server"
+        - "Runtimes: wms"
+        - "Other"
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        提交前请确认您已遵循以下步骤：
+          - 确认问题在 [**dev**](https://gitee.com/open-vela/docs) 上可重现。
+          - 遇到构建问题时运行 `make distclean`。
+          - 搜索 [现有问题](https://gitee.com/open-vela/docs/issues)

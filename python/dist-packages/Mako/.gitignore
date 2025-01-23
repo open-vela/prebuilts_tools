@@ -1,0 +1,16 @@
+/build
+/dist
+/.coverage
+/doc/build/output
+*.pyc
+*.orig
+*.egg-info
+*.sw[opq]
+/.Python
+/bin
+/include
+/lib
+/man
+.tox/
+.cache/
+.vscode
